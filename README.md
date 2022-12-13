@@ -11,7 +11,7 @@ We are using data from the South Australian Government Data Directory:
 https://data.sa.gov.au/data/dataset/road-crash-data/resource/1057e9ae-4672-4123-9c1d-1877483da401 and using the csv files from 2012_DATA_SA_Crash to 2021_DATA_SA_Crash
 
 ### Modifications
-The csv files were combined to get a larger data set to ensure accuracy of the Data Model exceeds 75%.
+The csv files were combined to get a larger data set to ensure accuracy of the Data Model exceeds 75%. However, with the current data set we were able to achieve accuracy of 68%.
 
 ## Output Data out of this analysis
 
@@ -34,7 +34,7 @@ Balvinder Rajbans
 
 ## Applications used:
 
-Python - Libraries: Pandas, SQLite3,Tensorflow, Scikit-Learn, Numpy, Glob
+Python - Libraries: Pandas, SQLite3, Tensorflow, Scikit-Learn, Numpy, Glob
 
 Google Colab
 
@@ -47,23 +47,31 @@ Tableau
 ### Extract : 
 The dataset is sourced from the South Australian Government Data Directory. The Master Zip file contains data in form of CSV  for Crash, Casuality and Unit from year 2012 to 2021.
 
-
 ### Transform:
+The crash dataframe is created by reading into the crash csv file and the extraction of data is processed and additional columns not required are dropped.
+The extracted data is stored in a new Dataframe ‘crash_df_filtered_1’ and will be used to load into the database.
 
+![chart](https://github.com/ParkaviMathi/Road_Safety/blob/main/Images/Data%20Set.png)
 
+### Data Analysis:
 
-##### Data Modelling - Tables :
+As the Dataframe is now cleaned and transformed ready to be loaded into the machine learning model, the Deep Neural Network Model is used to predict the accuracy of the Target variable classification.
 
+The scaled and transformed data is then passed through the neural network model, the number of input features and the hidden node in each layer is defined. 
 
+Two hidden layers are added to the Neural network with the ‘ReLu’ activation function.
 
-### Load:
+‘Softmax’ is used as the activation function for the Output Layer with 4 output units as per the unique values in ourTarget column.
 
+![chart](https://github.com/ParkaviMathi/Road_Safety/blob/main/Images/Model%20sequential.png)
 
+The model is then trained using the fit-model function with the number of epochs set to 10.
 
-.
+The model_loss and model_accuracy is then calculated using the nn.evaluate function.
 
-#### new goals table
+![chart](https://github.com/ParkaviMathi/Road_Safety/blob/main/Images/nn.evaluate%20function.png)
 
+The model was then trained by tuning the hyperparameters to see if the accuracy can be increased but no further improvement was found with the given dataset.
 
 ## Visualisations:
 Public Tableau has been used to generate all the visualisations.
