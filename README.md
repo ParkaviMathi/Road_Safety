@@ -34,18 +34,18 @@ Balvinder Rajbans
 
 ## Applications used:
 
-Python - Libraries: Pandas, SQLAlchemy
+Python - Libraries: Pandas, SQLite3,Tensorflow, Scikit-Learn, Numpy, Glob
 
 Google Colab
 
-Database - PGAdmin (PostgresSQL)
+Database - SQLite
 
 Tableau 
 
 ## Process:
 
-### Extract :
-
+### Extract : 
+The dataset is sourced from the South Australian Government Data Directory. The Master Zip file contains data in form of CSV  for Crash, Casuality and Unit from year 2012 to 2021.
 
 
 ### Transform:
