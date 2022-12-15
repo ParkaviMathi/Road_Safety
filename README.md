@@ -100,6 +100,11 @@ Public Tableau has been used to generate all the visualisations.
 
 ![chart](https://github.com/ParkaviMathi/Road_Safety/blob/main/Images/Map%20Showing%20Crashes%20in%20South%20Australia%202021.png)
 
+##### Tableau Viz - Project 4 - Road Safety
+
+https://public.tableau.com/views/Project4-RoadSafety/NumberCrashesinSouthAustralia2012-2021?:language=en-US&:display_count=n&:origin=viz_share_link 
+
 ## Project Report:
 To access the detailed process of Extract, Transform, Analyse and Visualisations follow the steps shown in the Project Report.
+
 
